@@ -1,6 +1,6 @@
 import type { TaskItemProps, TaskStatus } from '../../types';
 
-const status: Record<TaskStatus, TaskStatus> = {
+const nextStatus: Record<TaskStatus, TaskStatus> = {
   pending: 'in-progress',
   'in-progress': 'completed',
   completed: 'pending',
@@ -35,7 +35,7 @@ export default function TaskItem({
       )}
 
       <div className="task-button">
-        <button onClick={() => onStatusChange(task.id, status[task.status])}>
+        <button onClick={() => onStatusChange(task.id, nextStatus[task.status])}>
           {buttonLabel[task.status]}
         </button>
         <button className="delete" onClick={() => onDelete(task.id)}>
