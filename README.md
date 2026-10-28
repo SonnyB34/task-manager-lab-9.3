@@ -35,3 +35,15 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+## Reflections
+
+1. How did you ensure unique keys for you list items?
+
+    I used key={task.id} in TaskList. I didnt use the index as key because if you delete a task the index changes so the task changes position and that could confuse things.
+
+2. What considerations did you make when implementing the filtering functionality?
+
+3. How did you handle state updates for task status changes?
+
+4. What challenges did you face when implementing conditional rendering?
