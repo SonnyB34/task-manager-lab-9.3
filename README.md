@@ -1,4 +1,9 @@
-# React + TypeScript + Vite
+# Task Manager App
+
+Task manager app that demonstrates dynamic list rendering, key usage, and conditional rendering. Built with React and TypeScript.
+
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
