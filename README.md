@@ -42,8 +42,15 @@ See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rule
 
     I used key={task.id} in TaskList. I didnt use the index as key because if you delete a task the index changes so the task changes position and that could confuse things.
 
+
 2. What considerations did you make when implementing the filtering functionality?
+
+    That the status and priority filters work together a task must match both. If nothing matches then display a message. Also the App component does the filtering the TaskFilter just sends then info to be filtered to the App component this makes the TaskFilter reusable.
 
 3. How did you handle state updates for task status changes?
 
+    I used map() to build a new array. The task that matches is replaced in the copy and the new status using ...spread operator. Deleting works the same way using filter();
+
 4. What challenges did you face when implementing conditional rendering?
+
+    I used && operator for the Great job message and a ternary operator for the line through completed titles. I used class names with ${task.status} or ${task.priority} so I can use CSS for the styling instead of if statements.
